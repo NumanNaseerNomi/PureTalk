@@ -7,7 +7,7 @@
                     <a class="nav-link" href="/login">Login</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profile</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/profile">{{"<- User Name ->"}}</a></li>
                         <li><hr class="dropdown-divider"></li>
