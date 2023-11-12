@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand bg-body-tertiary fixed-top">
-    <div class="container-fluid">
+    <div class="container">
         <a class="navbar-brand" href="/">PureTalk</a>
         <div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
