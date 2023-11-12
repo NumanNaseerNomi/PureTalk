@@ -4,7 +4,7 @@
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
             <div class="card" style="width: 30rem;">
-                <div class="card-header">Register</div>
+                <div class="card-header">REGISTER</div>
                     <div class="card-body">
                         <form method="POST" action="/register">
                             <div class="form-floating mb-3">
