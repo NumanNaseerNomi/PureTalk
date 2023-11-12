@@ -21,7 +21,7 @@
                         </form>
                         <hr/>
                         <div class="d-grid gap-2">
-                            <a class="btn btn-outline-primary" href="/register" role="button">Create Account</a>
+                            <a class="btn btn-outline-primary" href="/register" role="button">Register</a>
                         </div>
                     </div>
                 </div>
