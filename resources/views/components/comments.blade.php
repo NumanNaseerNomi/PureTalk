@@ -9,6 +9,7 @@
                     <div class="text-break"><strong>==autour name==</strong>: ==comment content==</div>
                     <hr/>
                 @endforeach
+                @include('components.commentSend')
             </div>
         </div>
     </div>
