@@ -9,7 +9,7 @@
                         <form method="POST" action="/login">
                             <div class="form-floating mb-3">
                                 <input class="form-control" type="email" name="email" id="email">
-                                <label for="email">Email address</label>
+                                <label for="email">Email</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input class="form-control" type="password" name="password" id="password">
