@@ -1,7 +1,7 @@
 <div class="container text-center">
-    <div class="row justify-content-md-center">
-        <div class="col-md-auto">
-            <div class="card" style="width: 50rem;">
+    <!-- <div class="row justify-content-md-center">
+        <div class="col-md-auto"> -->
+            <div class="card">
                 <div class="card-header">PROFILE</div>
                     <div class="card-body">
                         <form method="POST" action="/register">
@@ -28,6 +28,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 </div>
