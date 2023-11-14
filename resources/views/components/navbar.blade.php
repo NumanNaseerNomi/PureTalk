@@ -4,11 +4,6 @@
         <div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 @if(true)
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
-                    </li>
-                @endif
-                @if(true)
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
                         <ul class="dropdown-menu dropdown-menu-end">
@@ -17,6 +12,11 @@
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="/logout">Logout</a></li>
                         </ul>
+                    </li>
+                @endif
+                @if(true)
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
                     </li>
                 @endif
             </ul>
