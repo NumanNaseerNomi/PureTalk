@@ -15,8 +15,7 @@
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#commentsAccordion">
       <div class="accordion-body">
-        <div class="text-break"><strong>==autour name==</strong>:
-        ==comment content==</div>
+        <div class="text-break"><strong>==autour name==</strong>: ==comment content==</div>
         <hr/>
     </div>
     </div>
