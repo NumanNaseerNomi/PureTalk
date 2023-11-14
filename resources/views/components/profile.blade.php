@@ -1,6 +1,4 @@
 <div class="container text-center">
-    <!-- <div class="row justify-content-md-center">
-        <div class="col-md-auto"> -->
             <div class="card">
                 <div class="card-header">PROFILE</div>
                     <div class="card-body">
@@ -28,6 +26,4 @@
                     </div>
                 </div>
             </div>
-        <!-- </div>
-    </div> -->
 </div>
