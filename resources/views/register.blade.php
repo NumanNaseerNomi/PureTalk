@@ -8,6 +8,10 @@
                     <div class="card-body">
                         <form method="POST" action="/register">
                             <div class="form-floating mb-3">
+                                <input class="form-control" type="name" name="name" id="name">
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
                                 <input class="form-control" type="email" name="email" id="email">
                                 <label for="email">Email</label>
                             </div>
