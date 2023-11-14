@@ -7,3 +7,4 @@
         </blockquote>
     </div>
 </div>
+@include('components.comments')
