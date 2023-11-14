@@ -3,7 +3,7 @@
         <div class="card-body">
             <form method="POST" action="/register">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <div class="form-floating mb-3">
                             <input class="form-control" type="email" name="email" id="email">
                             <label for="email">Old Password</label>
@@ -17,7 +17,7 @@
                             <label for="passwordConfirmation">Confirm Password</label>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <div class="form-floating mb-3">
                             <input class="form-control" type="name" name="name" id="name">
                             <label for="name">Name</label>
