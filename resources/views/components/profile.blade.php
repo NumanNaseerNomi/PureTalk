@@ -3,6 +3,8 @@
         <div class="card-header">PROFILE</div>
             <div class="card-body">
                 <form method="POST" action="/register">
+                    <div class="row">
+                        <div class="col-6">
                     <div class="form-floating mb-3">
                         <input class="form-control" type="email" name="email" id="email">
                         <label for="email">Email address</label>
@@ -17,6 +19,8 @@
                     </div>
                     <div class="d-grid gap-2">
                         <button class="btn btn-primary" type="submit">Register</button>
+                    </div>
+                        </div>
                     </div>
                 </form>
                 <hr/>
