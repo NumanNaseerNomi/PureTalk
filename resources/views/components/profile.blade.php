@@ -17,7 +17,7 @@
                         <div class="col-6">
                             <div class="form-floating mb-3">
                                 <input class="form-control" type="email" name="email" id="email">
-                                <label for="email">Email</label>
+                                <label for="email">Old Password</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input class="form-control" type="password" name="password" id="password">
