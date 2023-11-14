@@ -14,7 +14,7 @@
                                 <label for="email">Email</label>
                             </div>
                             <div class="d-grid gap-2">
-                                <button class="btn btn-primary btn-lg" type="submit">Register</button>
+                                <button class="btn btn-outline-primary btn-lg" type="submit">Save</button>
                             </div>
                         </div>
                         <div class="col-6">
