@@ -3,7 +3,7 @@
     <div class="card-body">
         <p>{{ $post->content }}</p>
         <blockquote class="blockquote mb-0">
-            <footer class="blockquote-footer">==autour name==</footer>
+            <footer class="blockquote-footer">{{ $post->user->name }}</footer>
         </blockquote>
     </div>
 </div>
