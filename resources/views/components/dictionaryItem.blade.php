@@ -5,7 +5,11 @@
             <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
                 <button type="button" class="btn btn-outline-primary">Block</button>
                 <button type="button" class="btn btn-outline-primary">Unblock</button>
-                <button type="button" class="btn btn-outline-primary">Delete</button>
+                <form action="{{ route('dictionary.delete', ['id' => $word->id]) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-outline-primary">Delete</button>
+                </form>
             </div>
         </div>
     </div>

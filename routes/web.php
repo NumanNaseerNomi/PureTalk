@@ -19,6 +19,7 @@ Route::get('/profile', function () { return view('profile'); });
 Route::get('/users', function () { return view('users'); });
 Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
 Route::post('/dictionary/create', [DictionaryController::class, 'create'])->name('dictionary.create');
+Route::delete('/dictionary/{id}', [DictionaryController::class, 'delete'])->name('dictionary.delete');
 
 Route::get('/register', function () { return view('register'); });
 Route::get('/login', function () { return view('login'); });
