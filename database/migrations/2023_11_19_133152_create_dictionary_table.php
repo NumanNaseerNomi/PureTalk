@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('dictionary', function (Blueprint $table) {
             $table->id();
+            $table->string('word');
+            $table->boolean('isBlock')->default(false);
             $table->timestamps();
         });
     }
