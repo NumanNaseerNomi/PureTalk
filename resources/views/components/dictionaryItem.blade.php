@@ -8,7 +8,7 @@
                     @method('PUT')
                     <button type="submit" class="btn btn-outline-primary">{{ $word->isBlock ? 'Unblock' : 'Block' }}</button>
                 </form>
-                <form action="{{ route('dictionary.delete', ['id' => $word->id]) }}" method="POST">
+                <form method="POST" action="{{ route('dictionary.delete', ['id' => $word->id]) }}">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-outline-primary">Delete</button>
