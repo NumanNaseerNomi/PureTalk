@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        @foreach (range(1, 10) as $number)
+        @foreach($words as $word)
             @include('components.dictionaryItem')
         @endforeach
     </div>
