@@ -14,6 +14,7 @@
                 </div>
             </div>
         </div>
+        <hr/>
         @foreach($words as $word)
             @include('components.dictionaryItem')
         @endforeach
