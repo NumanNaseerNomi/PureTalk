@@ -11,4 +11,9 @@ class Dictionary extends Model
     
     protected $table = 'dictionary';
     protected $fillable = ['word', 'isBlock'];
+
+    public static function blockedWords()
+    {
+        return self::where('isBlock', true)->pluck('word')->toArray();
+    }
 }
