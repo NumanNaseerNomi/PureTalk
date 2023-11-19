@@ -17,6 +17,7 @@ use App\Http\Controllers\DictionaryController;
 Route::get('/', function () { return view('home'); });
 Route::get('/profile', function () { return view('profile'); });
 Route::get('/users', function () { return view('users'); });
+
 Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
 Route::post('/dictionary/create', [DictionaryController::class, 'create'])->name('dictionary.create');
 Route::put('/dictionary/{id}/toggleBlock', [DictionaryController::class, 'toggleBlock'])->name('dictionary.toggleBlock');
