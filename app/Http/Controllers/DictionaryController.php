@@ -9,7 +9,7 @@ class DictionaryController extends Controller
 {
     public function index()
     {
-        $words = Dictionary::all();
+        $words = Dictionary::orderBy('word')->get();
 
         return view('dictionary', compact('words'));
     }
