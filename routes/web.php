@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\DictionaryController;
 
 /*
@@ -22,6 +23,8 @@ Route::get('/dictionary', [DictionaryController::class, 'index'])->name('diction
 Route::post('/dictionary/create', [DictionaryController::class, 'create'])->name('dictionary.create');
 Route::put('/dictionary/{id}/toggleBlock', [DictionaryController::class, 'toggleBlock'])->name('dictionary.toggleBlock');
 Route::delete('/dictionary/{id}', [DictionaryController::class, 'delete'])->name('dictionary.delete');
+
+Route::post('/post/create', [PostController::class, 'create'])->name('post.create');
 
 Route::get('/register', function () { return view('register'); });
 Route::get('/login', function () { return view('login'); });
