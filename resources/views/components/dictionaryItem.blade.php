@@ -2,7 +2,7 @@
     <div class="card text-center">
         <div class="card-body">
             <h5 class="card-title mb-3">{{ $word->word }}</h5>
-            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+            <div class="btn-group" role="group" aria-label="Small button group">
                 <form method="POST" action="{{ route('dictionary.toggleBlock', ['id' => $word->id]) }}">
                     @csrf
                     @method('PUT')
