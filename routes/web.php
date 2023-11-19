@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DictionaryController;
 
@@ -27,6 +28,7 @@ Route::put('/dictionary/{id}/toggleBlock', [DictionaryController::class, 'toggle
 Route::delete('/dictionary/{id}', [DictionaryController::class, 'delete'])->name('dictionary.delete');
 
 Route::post('/post/create', [PostController::class, 'create'])->name('post.create');
+Route::post('/comment/create', [CommentController::class, 'create'])->name('comment.create');
 
 Route::get('/register', function () { return view('register'); });
 Route::get('/login', function () { return view('login'); });
