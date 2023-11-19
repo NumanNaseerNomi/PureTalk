@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Dictionary extends Model
 {
     use HasFactory;
+    
+    protected $table = 'dictionary';
+    protected $fillable = ['word', 'isBlock'];
 }
