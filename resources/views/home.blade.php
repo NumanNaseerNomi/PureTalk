@@ -3,7 +3,7 @@
 <div class="container">
     @include('components.postCreate')
     <br/>
-    @foreach (range(1, 10) as $number)
+    @foreach ($posts as $post)
         @include('components.post')
         <br/>
     @endforeach
