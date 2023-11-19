@@ -1,5 +1,5 @@
 <div class="card">
-    <div class="card-header">New Post</div>
+    <div class="card-header">Create New Post</div>
     <div class="card-body">
         <form method="POST" action="/post/create">
             @csrf
@@ -12,7 +12,7 @@
                 <label for="content">Content</label>
             </div>
             <div class="d-grid gap-2">
-                <button class="btn btn-outline-primary" type="submit">Send</button>
+                <button class="btn btn-outline-primary" type="submit">Post</button>
             </div>
         </form>
     </div>
