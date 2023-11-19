@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DictionaryController;
 
 /*
@@ -17,7 +18,7 @@ use App\Http\Controllers\DictionaryController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/profile', function () { return view('profile'); });
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 Route::get('/users', function () { return view('users'); });
 
 Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
