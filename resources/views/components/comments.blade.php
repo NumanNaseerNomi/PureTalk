@@ -6,7 +6,7 @@
         <div id="collapse{{ $post->id }}" class="accordion-collapse collapse" data-bs-parent="#commentsAccordion{{ $post->id }}">
             <div class="accordion-body">
                 @foreach ($post->comments as $comment)
-                    <div class="text-break"><strong>==autour name==</strong>: {{ $comment->content }}</div>
+                    <div class="text-break"><strong>{{ $comment->user->name }}</strong>: {{ $comment->content }}</div>
                     <hr/>
                 @endforeach
                 @include('components.commentCreate')
