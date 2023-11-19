@@ -6,7 +6,8 @@
             <div class="card text-center">
                 <div class="card-header">Add Word</div>
                 <div class="card-body">
-                    <form class="input-group input-group-sm" method="POST" action="/">
+                    <form class="input-group input-group-sm" method="POST" action="/dictionary/create">
+                        @csrf
                         <input type="text" class="form-control" name="word" aria-label="Add word" aria-describedby="button-addon1" required>
                         <button class="btn btn-outline-secondary" type="submit" id="button-addon1">Save</button>
                     </form>

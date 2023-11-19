@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DictionaryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ Route::get('/', function () { return view('home'); });
 Route::get('/profile', function () { return view('profile'); });
 Route::get('/users', function () { return view('users'); });
 Route::get('/dictionary', function () { return view('dictionary'); });
+Route::post('/dictionary/create', [DictionaryController::class, 'create'])->name('dictionary.create');
 
 Route::get('/register', function () { return view('register'); });
 Route::get('/login', function () { return view('login'); });
