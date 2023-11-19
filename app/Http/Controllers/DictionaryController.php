@@ -28,6 +28,17 @@ class DictionaryController extends Controller
         return redirect()->back()->with('success', 'Word added successfully.');
     }
 
+    public function toggleBlock($id)
+    {
+        $word = Dictionary::findOrFail($id);
+        $word->isBlock = !$word->isBlock;
+        $word->save();
+
+        $status = $word->isBlock ? 'blocked' : 'unblocked';
+        
+        return redirect()->back()->with('success', "Word $status successfully.");
+    }
+
     public function delete($id)
     {
         $word = Dictionary::findOrFail($id);
