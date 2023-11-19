@@ -32,8 +32,7 @@ class TextSanitizer
         foreach($this->blockedWords as $word)
         {
             $pattern = "/\b" . preg_quote($word, '/') . "\b/i";
-            $replacement = str_repeat('*', strlen($word));
-            $text = preg_replace($pattern, $replacement, $text);
+            $text = preg_replace_callback($pattern, fn($matches) => $matches[0][0] . str_repeat('*', strlen($matches[0]) - 1), $text);
         }
 
         return $text;
