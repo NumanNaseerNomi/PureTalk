@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
@@ -25,6 +26,13 @@ class AuthController extends Controller
         if(Auth::attempt($credentials))
         {
             $request->session()->regenerate();
+            $user = Auth::user();
+
+            if(!$user->hasVerifiedEmail())
+            {
+                Auth::logout();
+                return back()->withErrors(['email' => 'Your email address is not verified.'])->onlyInput('email');
+            }
  
             return redirect()->intended('/');
         }
