@@ -6,7 +6,7 @@
                 <form method="POST" action="{{ route('profile.update') }}">
                     @csrf
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="name" name="name" id="name" value="{{ $user->name }}">
+                        <input class="form-control" type="name" name="name" id="name" value="{{ $user->name }}" required>
                         <label for="name">Name</label>
                     </div>
                     <div class="form-floating mb-3">
