@@ -22,8 +22,8 @@
                 <form method="POST" action="{{ route('password.update') }}">
                     @csrf
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="email" name="email" id="email">
-                        <label for="email">Old Password</label>
+                        <input class="form-control" type="password" name="current_password" id="current_password">
+                        <label for="current_password">Current Password</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input class="form-control" type="password" name="password" id="password">
