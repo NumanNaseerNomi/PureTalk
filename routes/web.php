@@ -30,6 +30,7 @@ Route::middleware(['auth'])->group(
     {
         Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
         Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+        
         Route::get('/users', function () { return view('users'); });
 
         Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
