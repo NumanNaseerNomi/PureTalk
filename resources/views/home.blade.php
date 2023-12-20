@@ -2,7 +2,7 @@
 @include('components.navbar')
 <div class="container">
     @include('components.alerts')
-    @if(Auth::check())
+    @if(Auth::check() && Auth::user()->role != 'admin')
         @include('components.postCreate')
         <br/>
     @endif
