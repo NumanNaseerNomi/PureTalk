@@ -1,6 +1,7 @@
 @include('layouts.header')
 @include('components.navbar')
 <div class="container">
+    @include('components.alerts')
     <div class="card text-center mb-3">
         <div class="card-header">Add Word</div>
         <div class="card-body">
