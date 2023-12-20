@@ -11,7 +11,7 @@
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="/users">Users</a></li>
                             @if(Auth::user()->role == 'admin')
-                            <li><a class="dropdown-item" href="/dictionary">Word Dictionary</a></li>
+                                <li><a class="dropdown-item" href="/dictionary">Word Dictionary</a></li>
                             @endif
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="/logout">Logout</a></li>
