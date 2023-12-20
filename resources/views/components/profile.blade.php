@@ -5,11 +5,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="name" name="name" id="name">
+                        <input class="form-control" type="name" name="name" id="name" value="{{ $user->name }}">
                         <label for="name">Name</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="email" name="email" id="email">
+                        <input class="form-control" type="email" name="email" id="email"  value="{{ $user->email }}">
                         <label for="email">Email</label>
                     </div>
                 </div>
