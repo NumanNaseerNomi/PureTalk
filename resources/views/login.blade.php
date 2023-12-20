@@ -6,7 +6,8 @@
             <div class="card" style="width: 30rem;">
                 <div class="card-header">LOGIN</div>
                     <div class="card-body">
-                        <form method="POST" action="/login">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
                             <div class="form-floating mb-3">
                                 <input class="form-control" type="email" name="email" id="email">
                                 <label for="email">Email</label>
