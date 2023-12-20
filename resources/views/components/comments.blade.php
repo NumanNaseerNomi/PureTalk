@@ -9,7 +9,9 @@
                     <div class="text-break"><strong>{{ $comment->user->name }}</strong>: {{ $comment->content }}</div>
                     <hr/>
                 @endforeach
-                @include('components.commentCreate')
+                @if(Auth::check())
+                    @include('components.commentCreate')
+                @endif
             </div>
         </div>
     </div>
