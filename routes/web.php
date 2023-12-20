@@ -39,6 +39,7 @@ Route::middleware(['auth'])->group(
         Route::delete('/dictionary/{id}', [DictionaryController::class, 'delete'])->name('dictionary.delete');
 
         Route::post('/post/create', [PostController::class, 'create'])->name('post.create');
+        Route::delete('/post/{id}', [PostController::class, 'delete'])->name('post.delete');
         Route::post('/comment/create', [CommentController::class, 'create'])->name('comment.create');
 
         Route::post('/password/update', [AuthController::class, 'updatePassword'])->name('password.update');
