@@ -4,6 +4,7 @@
         <div class="row">
             <div class="col-md-6">
                 <form method="POST" action="{{ route('profile.update') }}">
+                    @csrf
                     <div class="form-floating mb-3">
                         <input class="form-control" type="name" name="name" id="name" value="{{ $user->name }}">
                         <label for="name">Name</label>
@@ -19,6 +20,7 @@
             </div>
             <div class="col-md-6">
                 <form method="POST" action="/register">
+                    @csrf
                     <div class="form-floating mb-3">
                         <input class="form-control" type="email" name="email" id="email">
                         <label for="email">Old Password</label>
