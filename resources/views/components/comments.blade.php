@@ -9,7 +9,7 @@
                     <div class="text-break"><strong>{{ $comment->user->name }}</strong>: {{ $comment->content }}</div>
                     <hr/>
                 @endforeach
-                @if(Auth::check())
+                @if(Auth::check() && Auth::user()->role != 'admin')
                     @include('components.commentCreate')
                 @endif
             </div>
