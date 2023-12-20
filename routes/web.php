@@ -24,16 +24,16 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::middleware(['auth'])->group(
     function()
     {
-Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
-Route::get('/users', function () { return view('users'); });
+        Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+        Route::get('/users', function () { return view('users'); });
 
-Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
-Route::post('/dictionary/create', [DictionaryController::class, 'create'])->name('dictionary.create');
-Route::put('/dictionary/{id}/toggleBlock', [DictionaryController::class, 'toggleBlock'])->name('dictionary.toggleBlock');
-Route::delete('/dictionary/{id}', [DictionaryController::class, 'delete'])->name('dictionary.delete');
+        Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
+        Route::post('/dictionary/create', [DictionaryController::class, 'create'])->name('dictionary.create');
+        Route::put('/dictionary/{id}/toggleBlock', [DictionaryController::class, 'toggleBlock'])->name('dictionary.toggleBlock');
+        Route::delete('/dictionary/{id}', [DictionaryController::class, 'delete'])->name('dictionary.delete');
 
-Route::post('/post/create', [PostController::class, 'create'])->name('post.create');
-Route::post('/comment/create', [CommentController::class, 'create'])->name('comment.create');
+        Route::post('/post/create', [PostController::class, 'create'])->name('post.create');
+        Route::post('/comment/create', [CommentController::class, 'create'])->name('comment.create');
     }
 );
 
