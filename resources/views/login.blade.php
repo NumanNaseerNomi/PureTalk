@@ -6,6 +6,13 @@
             <div class="card" style="width: 30rem;">
                 <div class="card-header">LOGIN</div>
                     <div class="card-body">
+                        @if($errors->any())
+                            <ul class="alert alert-danger ps-4" role="alert">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        @endif
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-floating mb-3">
