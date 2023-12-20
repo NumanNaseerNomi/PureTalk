@@ -17,6 +17,6 @@ class ProfileController extends Controller
         $textSanitizer = new TextSanitizer();
         $textSanitizer->sanitize($posts);
         
-        return view('profile', compact('posts'));
+        return view('profile', compact('user', 'posts'));
     }
 }
