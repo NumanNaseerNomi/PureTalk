@@ -1,6 +1,7 @@
 @include('layouts.header')
 @include('components.navbar')
 <div class="container text-center">
+    @include('components.alerts')
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
             <div class="card" style="width: 30rem;">
