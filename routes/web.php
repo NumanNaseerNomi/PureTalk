@@ -34,10 +34,11 @@ Route::middleware(['auth'])->group(
 
         Route::post('/post/create', [PostController::class, 'create'])->name('post.create');
         Route::post('/comment/create', [CommentController::class, 'create'])->name('comment.create');
+        
+        Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     }
 );
 
 Route::get('/register', function () { return view('register'); });
 Route::get('/login', [AuthController::class, 'showLoginPage'])->name('loginPage');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
