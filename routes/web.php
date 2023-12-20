@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
@@ -31,5 +32,5 @@ Route::post('/post/create', [PostController::class, 'create'])->name('post.creat
 Route::post('/comment/create', [CommentController::class, 'create'])->name('comment.create');
 
 Route::get('/register', function () { return view('register'); });
-Route::get('/login', function () { return view('login'); });
+Route::get('/login', [AuthController::class, 'showLoginPage'])->name('loginPage');
 Route::redirect('/logout', '/login');
