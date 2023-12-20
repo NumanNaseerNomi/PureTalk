@@ -9,7 +9,7 @@
                         <label for="name">Name</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="email" name="email" id="email"  value="{{ $user->email }}">
+                        <input class="form-control" type="email" id="email"  value="{{ $user->email }}">
                         <label for="email">Email</label>
                     </div>
                 </div>
