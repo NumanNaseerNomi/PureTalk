@@ -12,6 +12,9 @@
                         <input class="form-control" type="email" id="email"  value="{{ $user->email }}" readonly>
                         <label for="email">Email</label>
                     </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-primary" type="submit">Save</button>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-floating mb-3">
