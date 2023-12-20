@@ -30,7 +30,7 @@ Route::middleware(['auth'])->group(
     {
         Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
         Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
-        
+
         Route::get('/users', function () { return view('users'); });
 
         Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
@@ -41,6 +41,7 @@ Route::middleware(['auth'])->group(
         Route::post('/post/create', [PostController::class, 'create'])->name('post.create');
         Route::post('/comment/create', [CommentController::class, 'create'])->name('comment.create');
 
+        Route::post('/password/update', [AuthController::class, 'updatePassword'])->name('password.update');
         Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     }
 );
