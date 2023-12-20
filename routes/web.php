@@ -20,6 +20,7 @@ use App\Http\Controllers\DictionaryController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::redirect('/home', '/');
 
 Route::middleware(['guest'])->group(
     function()
