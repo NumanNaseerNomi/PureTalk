@@ -34,4 +34,4 @@ Route::post('/comment/create', [CommentController::class, 'create'])->name('comm
 Route::get('/register', function () { return view('register'); });
 Route::get('/login', [AuthController::class, 'showLoginPage'])->name('loginPage');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
-Route::redirect('/logout', '/login');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
