@@ -19,7 +19,7 @@
                 </form>
             </div>
             <div class="col-md-6">
-                <form method="POST" action="/register">
+                <form method="POST" action="{{ route('password.update') }}">
                     @csrf
                     <div class="form-floating mb-3">
                         <input class="form-control" type="email" name="email" id="email">
