@@ -33,7 +33,13 @@ class AuthController extends Controller
                 Auth::logout();
                 return back()->withErrors(['email' => 'Your email address is not verified.'])->onlyInput('email');
             }
- 
+            
+            if($user->bannedTill && Carbon::now()->lt($user->bannedTill))
+            {
+                Auth::logout();
+                return back()->withErrors(['email' => 'Your account has been banned until ' . $user->bannedTill])->onlyInput('email');
+            }
+
             return redirect()->intended('/');
         }
  
