@@ -22,15 +22,15 @@
                 <form method="POST" action="{{ route('password.update') }}">
                     @csrf
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="password" name="current_password" id="current_password">
+                        <input class="form-control" type="password" name="current_password" id="current_password" required>
                         <label for="current_password">Current Password</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="password" name="password" id="password">
+                        <input class="form-control" type="password" name="password" id="password" required>
                         <label for="password">Password</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input class="form-control" type="password" name="password_confirmation" id="passwordConfirmation">
+                        <input class="form-control" type="password" name="password_confirmation" id="passwordConfirmation" required>
                         <label for="passwordConfirmation">Confirm Password</label>
                     </div>
                     <div class="d-grid gap-2">
