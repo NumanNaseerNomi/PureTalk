@@ -7,7 +7,7 @@
                 <div class="card-header">LOGIN</div>
                     <div class="card-body">
                         @if($errors->any())
-                            <ul class="alert alert-danger ps-4" role="alert">
+                            <ul class="alert alert-danger ps-4 text-start" role="alert">
                                 @foreach($errors->all() as $error)
                                     <li>{{ $error }}</li>
                                 @endforeach
