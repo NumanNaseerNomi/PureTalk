@@ -1,6 +1,7 @@
 @include('layouts.header')
 @include('components.navbar')
 <div class="container">
+    @include('components.alerts')
     @include('components.profile')
     <br/>
     @include('components.postCreate')
