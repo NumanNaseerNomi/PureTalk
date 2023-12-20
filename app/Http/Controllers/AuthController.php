@@ -40,7 +40,7 @@ class AuthController extends Controller
                 return back()->withErrors(['email' => 'Your account has been banned until ' . $user->bannedTill])->onlyInput('email');
             }
 
-            return redirect()->intended('/');
+            return redirect()->route('home');
         }
  
         return back()->withErrors(['email' => 'The provided credentials do not match our records.'])->onlyInput('email');
