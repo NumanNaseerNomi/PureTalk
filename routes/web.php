@@ -20,6 +20,10 @@ use App\Http\Controllers\DictionaryController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::middleware(['auth'])->group(
+    function()
+    {
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 Route::get('/users', function () { return view('users'); });
 
@@ -30,6 +34,8 @@ Route::delete('/dictionary/{id}', [DictionaryController::class, 'delete'])->name
 
 Route::post('/post/create', [PostController::class, 'create'])->name('post.create');
 Route::post('/comment/create', [CommentController::class, 'create'])->name('comment.create');
+    }
+);
 
 Route::get('/register', function () { return view('register'); });
 Route::get('/login', [AuthController::class, 'showLoginPage'])->name('loginPage');
