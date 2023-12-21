@@ -1,6 +1,7 @@
 @include('layouts.header')
 @include('components.navbar')
 <div class="container">
+    @include('components.alerts')
     <div class="row">
         <div class="col-md-3 mb-3">
             <div class="card text-center">
@@ -23,6 +24,13 @@
                         <div class="form-floating mb-3">
                             <input class="form-control" type="password" name="password_confirmation" id="passwordConfirmation">
                             <label for="passwordConfirmation">Confirm Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="floatingSelect" name="role">
+                                <option value="user" selected>User</option>
+                                <option value="moderator">Moderator</option>
+                            </select>
+                            <label for="floatingSelect">Role</label>
                         </div>
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary" type="submit">Save</button>
