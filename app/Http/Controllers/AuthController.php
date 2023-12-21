@@ -31,11 +31,11 @@ class AuthController extends Controller
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
                 'password' => Hash::make($request->input('password')),
-                'role' => 'user',
+                'role' => $request->input('role', 'user'),
             ]
         );
 
-        return redirect()->route('login')->with('success', 'Registered successfully');
+        return redirect()->back()->with('success', 'Registered successfully');
     }
 
     public function showLoginPage()
