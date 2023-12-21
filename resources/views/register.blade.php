@@ -6,7 +6,7 @@
             <div class="card" style="width: 30rem;">
                 <div class="card-header">REGISTER</div>
                     <div class="card-body">
-                        <form method="POST" action="/register">
+                        <form method="POST" action="{{ route('register') }}">
                             <div class="form-floating mb-3">
                                 <input class="form-control" type="name" name="name" id="name">
                                 <label for="name">Name</label>
