@@ -26,7 +26,7 @@ class AuthController extends Controller
             ]
         );
 
-        User::create(
+        $user = User::create(
             [
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
@@ -34,6 +34,11 @@ class AuthController extends Controller
                 'role' => $request->input('role', 'user'),
             ]
         );
+
+        if($request->has('role'))
+        {
+            $user->markEmailAsVerified();
+        }
 
         return redirect()->back()->with('success', 'Registered successfully');
     }
