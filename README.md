@@ -59,10 +59,22 @@ Before you begin, make sure you have the following installed on your system:
 
 ## Running the Application
 
+- Compile assets with npm run dev:
+
+   ```bash
+   npm run dev
+
 - To start the Laravel development server, run:
 
    ```bash
    php artisan serve
+
+## Default User
+
+After completing the installation, a default user is created with the following credentials:
+
+- Email: admin@admin.com
+- Password: admin@admin.com
 
 Visit http://localhost:8000 in your web browser to access the PureTalk application.
 
