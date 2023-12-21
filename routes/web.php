@@ -22,11 +22,12 @@ use App\Http\Controllers\DictionaryController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::redirect('/home', '/');
 
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+
 Route::middleware(['guest'])->group(
     function()
     {
         Route::get('/register', [AuthController::class, 'showRegisterPage'])->name('registerPage');
-        Route::post('/register', [AuthController::class, 'register'])->name('register');
 
         Route::get('/login', [AuthController::class, 'showLoginPage'])->name('loginPage');
         Route::post('/login', [AuthController::class, 'login'])->name('login');
