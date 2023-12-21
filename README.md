@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the PureTalk! This README provides instructions on how to set up the project on your local machine. Follow the steps below to get started.
+Welcome to the PureTalk! This README provides instructions on how to set up the project on your machine. Follow the steps below to get started.
 
 ### Prerequisites
 
@@ -15,7 +15,7 @@ Before you begin, make sure you have the following installed on your system:
 
 ## Installation
 
-- Clone the repository to your local machine:
+- Clone the repository to your machine:
 
    ```bash
    git clone https://github.com/iLaibaHabib/PureTalk.git
@@ -45,7 +45,7 @@ Before you begin, make sure you have the following installed on your system:
    ```bash
    php artisan key:generate
 
-- Configure the database connection in the .env file. Set the DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD variables according to your local environment.
+- Configure the database connection in the .env file. Set the DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD variables according to your environment.
 
 - Run migrations to create the database tables:
 
