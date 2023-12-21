@@ -10,6 +10,11 @@ use Illuminate\Http\RedirectResponse;
 
 class AuthController extends Controller
 {
+    public function showRegisterPage()
+    {
+        return view('register');
+    }
+
     public function showLoginPage()
     {
         return view('login');
