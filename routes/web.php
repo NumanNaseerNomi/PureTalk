@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DictionaryController;
@@ -40,7 +41,7 @@ Route::middleware(['auth'])->group(
         Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
         Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
-        Route::get('/users', function () { return view('users'); });
+        Route::get('/users', [UserController::class, 'index'])->name('users');
 
         Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
         Route::post('/dictionary/create', [DictionaryController::class, 'create'])->name('dictionary.create');
