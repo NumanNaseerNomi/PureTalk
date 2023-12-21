@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         <div class="form-floating mb-3">
-                            <input class="form-control" type="name" name="name" id="name">
+                            <input class="form-control" type="text" name="name" id="name">
                             <label for="name">Name</label>
                         </div>
                         <div class="form-floating mb-3">
