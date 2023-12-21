@@ -3,9 +3,9 @@
 <div class="container">
     @include('components.alerts')
     <div class="btn-group mb-3">
-        <a href="#" class="btn btn-outline-primary active" aria-current="page">Active</a>
-        <a href="#" class="btn btn-outline-primary">Pending Approvals</a>
-        <a href="#" class="btn btn-outline-primary">Banned</a>
+        <a href="?tab=active" class="btn btn-outline-primary active" aria-current="page">Active</a>
+        <a href="?tab=pending" class="btn btn-outline-primary">Pending Approvals</a>
+        <a href="?tab=banned" class="btn btn-outline-primary">Banned</a>
     </div>
     <div class="row">
         <div class="col-md-3 mb-3">
