@@ -24,14 +24,13 @@
                             <label for="passwordConfirmation">Confirm Password</label>
                         </div>
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary" type="submit">Register</button>
+                            <button class="btn btn-primary" type="submit">Save</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
         @foreach (range(1, 10) as $number)
-            <!-- @include('components.dictionaryItem') -->
         @endforeach
     </div>
 </div>
