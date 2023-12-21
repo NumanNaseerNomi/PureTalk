@@ -10,19 +10,19 @@
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="name" name="name" id="name">
+                                <input class="form-control" type="name" name="name" id="name" required>
                                 <label for="name">Name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="email" name="email" id="email">
+                                <input class="form-control" type="email" name="email" id="email" required>
                                 <label for="email">Email</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="password" name="password" id="password">
+                                <input class="form-control" type="password" name="password" id="password" required>
                                 <label for="password">Password</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="password" name="password_confirmation" id="passwordConfirmation">
+                                <input class="form-control" type="password" name="password_confirmation" id="passwordConfirmation" required>
                                 <label for="passwordConfirmation">Confirm Password</label>
                             </div>
                             <div class="d-grid gap-2">
