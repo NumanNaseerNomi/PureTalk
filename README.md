@@ -78,4 +78,4 @@ After completing the installation, a default user is created with the following 
 - Email: admin@admin.com
 - Password: admin@admin.com
 
-That's it! You've successfully set up PureTalks on your machine. If you encounter any issues, please refer to the Laravel documentation or the project's issue tracker.
+That's it! You've successfully set up PureTalk on your machine. If you encounter any issues, please refer to the Laravel documentation or the project's issue tracker.
