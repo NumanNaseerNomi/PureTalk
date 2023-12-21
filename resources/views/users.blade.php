@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-3 mb-3">
             <div class="card text-center">
-                <div class="card-header">Register Moderator</div>
+                <div class="card-header">Register User</div>
                 <div class="card-body">
                     <form method="POST" action="/register">
                         <div class="form-floating mb-3">
