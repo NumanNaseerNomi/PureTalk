@@ -69,13 +69,13 @@ Before you begin, make sure you have the following installed on your system:
    ```bash
    php artisan serve
 
+Visit http://localhost:8000 in your web browser to access the PureTalk application.
+
 ## Default User
 
 After completing the installation, a default user is created with the following credentials:
 
 - Email: admin@admin.com
 - Password: admin@admin.com
-
-Visit http://localhost:8000 in your web browser to access the PureTalk application.
 
 That's it! You've successfully set up PureTalks on your machine. If you encounter any issues, please refer to the Laravel documentation or the project's issue tracker.
