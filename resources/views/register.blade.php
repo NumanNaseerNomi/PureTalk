@@ -10,7 +10,7 @@
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="name" name="name" id="name" required>
+                                <input class="form-control" type="text" name="name" id="name" required>
                                 <label for="name">Name</label>
                             </div>
                             <div class="form-floating mb-3">
