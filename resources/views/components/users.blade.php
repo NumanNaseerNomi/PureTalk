@@ -19,7 +19,13 @@
                 @if(request('tab') == 'banned')
                     <td>{{ $user->bannedTill }}</td>
                 @endif
-                <td>Actions</td>
+                <td>
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                        <button type="button" class="btn btn-outline-primary">Approve</button>
+                        <button type="button" class="btn btn-outline-primary">Middle</button>
+                        <button type="button" class="btn btn-outline-primary">Right</button>
+                    </div>
+                </td>
             </tr>
         @endforeach
     </tbody>
