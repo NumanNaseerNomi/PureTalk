@@ -21,7 +21,9 @@
                 @endif
                 <td>
                     <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                        <button type="button" class="btn btn-outline-primary">Approve</button>
+                        @if(Auth::user()->role == 'admin' && request('tab') == 'pending')
+                            <button type="button" class="btn btn-outline-primary">Approve</button>
+                        @endif
                         <button type="button" class="btn btn-outline-primary">Middle</button>
                         <button type="button" class="btn btn-outline-primary">Right</button>
                     </div>
