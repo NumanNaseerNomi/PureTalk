@@ -13,5 +13,6 @@
     @if(Auth::user()->role == 'admin' && request('tab') == 'moderators')
         @include('components.moderatorCreate')
     @endif
+    @include('components.users')
 </div>
 @include('layouts.footer')
