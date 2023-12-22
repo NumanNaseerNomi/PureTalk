@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -17,7 +18,7 @@ class PostController extends Controller
         );
 
         $postData = $request->all();
-        $postData['user_id'] = 1;
+        $postData['user_id'] = Auth::id();
 
         Post::create($postData);
 
