@@ -21,7 +21,10 @@
                 @endif
                 <td>
                     @if(Auth::user()->role == 'admin' && request('tab') == 'pending')
-                        <button type="button" class="btn btn-outline-primary btn-sm">Approve</button>
+                        <form method="POST" action="{{ route('user.approve', ['id' => $user->id]) }}">
+                            @csrf
+                            <button type="submit" class="btn btn-outline-primary btn-sm">Approve</button>
+                        </form>
                     @endif
                 </td>
             </tr>
