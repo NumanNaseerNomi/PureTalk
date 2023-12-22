@@ -63,12 +63,12 @@ class UserController extends Controller
         $request->validate(
             [
                 'id' => 'required',
-                'bannedTill' => 'required|date',
+                'bannedTill' => 'nullable|date',
             ]
         );
 
         $user = User::findOrFail($request->input('id'));
-        $user->bannedTill = $user->bannedTill;
+        $user->bannedTill = $request->input('bannedTill');
         $user->save();
 
         $status = $user->bannedTill > now() ? ' banned till ' . $user->bannedTill : ' unbanned';
