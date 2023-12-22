@@ -43,7 +43,7 @@ Route::middleware(['auth'])->group(
 
         Route::get('/users', [UserController::class, 'index'])->name('users');
         Route::post('/user/approve', [UserController::class, 'approve'])->name('user.approve');
-        Route::post('/user/delete', [UserController::class, 'delete'])->name('user.delete');
+        Route::delete('/user', [UserController::class, 'delete'])->name('user.delete');
 
         Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
         Route::post('/dictionary', [DictionaryController::class, 'create'])->name('dictionary.create');
