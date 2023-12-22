@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Helpers\TextSanitizer;
 use Illuminate\Support\Facades\Auth;
@@ -24,8 +25,12 @@ class ProfileController extends Controller
     {
         $request->validate(['name' => 'required']);
 
-        Auth::user()->update(['name' => $request->input('name')]);
+        $id = $request->input('id') ?? Auth::id();
+
+        $user = User::findOrFail($id);
+        $user->name = $request->input('name');
+        $user->save();
         
-        return redirect()->back()->with('success', 'Profile updated successfully.');
+        return redirect()->back()->with('success', 'Name updated successfully.');
     }
 }
