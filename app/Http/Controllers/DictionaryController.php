@@ -28,6 +28,22 @@ class DictionaryController extends Controller
         return redirect()->back()->with('success', 'Word added successfully.');
     }
 
+    public function update(Request $request)
+    {
+        $request->validate(
+            [
+                'id' => 'required',
+                'word' => 'required|unique:dictionary'
+            ]
+        );
+        
+        $item = Dictionary::findOrFail($request->input('id'));
+        $item->word = $request->input('word');
+        $item->update();
+        
+        return redirect()->back()->with('success', 'Word updated successfully.');
+    }
+
     public function toggleBlock($id)
     {
         $word = Dictionary::findOrFail($id);
