@@ -42,8 +42,8 @@ Route::middleware(['auth'])->group(
         Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
         Route::get('/users', [UserController::class, 'index'])->name('users');
-        Route::post('/user/approve', [UserController::class, 'approve'])->name('user.approve');
         Route::delete('/user', [UserController::class, 'delete'])->name('user.delete');
+        Route::post('/user/approve', [UserController::class, 'approve'])->name('user.approve');
 
         Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
         Route::post('/dictionary', [DictionaryController::class, 'create'])->name('dictionary.create');
@@ -53,7 +53,7 @@ Route::middleware(['auth'])->group(
 
         Route::post('/post', [PostController::class, 'create'])->name('post.create');
         Route::delete('/post', [PostController::class, 'delete'])->name('post.delete');
-        
+
         Route::post('/comment', [CommentController::class, 'create'])->name('comment.create');
 
         Route::put('/password', [AuthController::class, 'updatePassword'])->name('password.update');
