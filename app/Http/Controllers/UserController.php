@@ -57,4 +57,24 @@ class UserController extends Controller
 
         return redirect()->back()->with('success', $message);
     }
+
+    public function ban(Request $request)
+    {
+        $request->validate(
+            [
+                'id' => 'required',
+                'bannedTill' => 'required|date',
+            ]
+        );
+
+        $user = User::findOrFail($request->input('id'));
+        $user->bannedTill = $user->bannedTill;
+        $user->save();
+
+        $status = $user->bannedTill > now() ? ' banned till ' . $user->bannedTill : ' unbanned';
+
+        $message = 'Email ' . $user->email . $status . ' successfully.';
+
+        return redirect()->back()->with('success', $message);
+    }
 }
