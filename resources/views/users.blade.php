@@ -3,9 +3,9 @@
 <div class="container">
     @include('components.alerts')
     <div class="btn-group mb-3">
-        <a href="?tab=active" class="btn btn-outline-primary active" aria-current="page">Active</a>
-        <a href="?tab=pending" class="btn btn-outline-primary">Pending Approvals</a>
-        <a href="?tab=banned" class="btn btn-outline-primary">Banned</a>
+        <a href="?tab=active" class="btn btn-outline-primary @if(request('tab') == 'active' || request('tab') == null) active @endif">Active</a>
+        <a href="?tab=pending" class="btn btn-outline-primary @if(request('tab') == 'pending') active @endif">Pending Approvals</a>
+        <a href="?tab=banned" class="btn btn-outline-primary @if(request('tab') == 'banned') active @endif">Banned</a>
     </div>
     <div class="row">
         <div class="col-md-3 mb-3">
