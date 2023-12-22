@@ -23,7 +23,9 @@ class ProfileController extends Controller
     public function update(Request $request)
     {
         $request->validate(['name' => 'required']);
+
         Auth::user()->update(['name' => $request->input('name')]);
+        
         return redirect()->back()->with('success', 'Profile updated successfully.');
     }
 }
