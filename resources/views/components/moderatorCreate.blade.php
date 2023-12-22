@@ -1,4 +1,4 @@
-<div class="card text-center">
+<div class="card text-center mb-3">
     <div class="card-header">Add Moderator</div>
     <div class="card-body">
         <form method="POST" action="{{ route('register') }}">
