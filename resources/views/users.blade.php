@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-md-3 mb-3">
             <div class="card text-center">
-                <div class="card-header">Register User</div>
+                <div class="card-header">Add Moderators</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -33,13 +33,7 @@
                             <input class="form-control" type="password" name="password_confirmation" id="passwordConfirmation" required>
                             <label for="passwordConfirmation">Confirm Password</label>
                         </div>
-                        <div class="form-floating mb-3">
-                            <select class="form-select" id="floatingSelect" name="role">
-                                <option value="user" selected>User</option>
-                                <option value="moderator">Moderator</option>
-                            </select>
-                            <label for="floatingSelect">Role</label>
-                        </div>
+                        <input class="form-control" type="text" name="role" id="role" value="Moderator" required hidden>
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary" type="submit">Save</button>
                         </div>
