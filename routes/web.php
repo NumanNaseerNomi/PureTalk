@@ -49,7 +49,7 @@ Route::middleware(['auth'])->group(
         Route::post('/dictionary', [DictionaryController::class, 'create'])->name('dictionary.create');
         Route::put('/dictionary', [DictionaryController::class, 'update'])->name('dictionary.update');
         Route::put('/dictionary/toggleBlock', [DictionaryController::class, 'toggleBlock'])->name('dictionary.toggleBlock');
-        Route::delete('/dictionary/{id}', [DictionaryController::class, 'delete'])->name('dictionary.delete');
+        Route::delete('/dictionary', [DictionaryController::class, 'delete'])->name('dictionary.delete');
 
         Route::post('/post/create', [PostController::class, 'create'])->name('post.create');
         Route::delete('/post/{id}', [PostController::class, 'delete'])->name('post.delete');
