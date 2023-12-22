@@ -45,4 +45,14 @@ class UserController extends Controller
 
         return redirect()->back()->with('success', $message);
     }
+
+    public function delete(Request $request)
+    {
+        $user = User::findOrFail($request->input('id'));
+        $user->delete();
+
+        $message = "Moderator '" . $user->email . "' successfully deleted!";
+
+        return redirect()->back()->with('success', $message);
+    }
 }
