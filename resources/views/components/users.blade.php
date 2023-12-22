@@ -56,6 +56,14 @@
                             </form>
                         </div>
                     @endif
+                    @if(Auth::user()->role == 'moderator' && request('tab') == 'banned')
+                        <form method="POST" action="{{ route('user.ban', ['id' => $user->id]) }}">
+                            @csrf
+                            @method('PUT')
+                            <input type="datetime-local" name="bannedTill" hidden>
+                            <button type="submit" class="btn btn-outline-primary btn-sm">Unban</button>
+                        </form>
+                    @endif
                 </td>
             </tr>
         @endforeach
