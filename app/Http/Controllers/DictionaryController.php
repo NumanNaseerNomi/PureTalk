@@ -39,7 +39,7 @@ class DictionaryController extends Controller
         
         $item = Dictionary::findOrFail($request->input('id'));
         $item->word = $request->input('word');
-        $item->update();
+        $item->save();
         
         return redirect()->back()->with('success', 'Word updated successfully.');
     }
