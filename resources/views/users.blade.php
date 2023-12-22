@@ -6,6 +6,9 @@
         <a href="?tab=active" class="btn btn-outline-primary @if(request('tab') == 'active' || request('tab') == null) active @endif">Active</a>
         <a href="?tab=pending" class="btn btn-outline-primary @if(request('tab') == 'pending') active @endif">Pending Approvals</a>
         <a href="?tab=banned" class="btn btn-outline-primary @if(request('tab') == 'banned') active @endif">Banned</a>
+        @if(Auth::user()->role == 'admin')
+            <a href="?tab=moderators" class="btn btn-outline-primary @if(request('tab') == 'moderators') active @endif">Moderators</a>
+        @endif
     </div>
     <div class="row">
         <div class="col-md-3 mb-3">
