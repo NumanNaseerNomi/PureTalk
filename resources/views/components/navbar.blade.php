@@ -8,8 +8,10 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="/profile">Profile</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/users">Users</a></li>
+                            @if(Auth::user()->role != 'user')
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/users">Users</a></li>
+                            @endif
                             @if(Auth::user()->role == 'admin')
                                 <li><a class="dropdown-item" href="/dictionary">Word Dictionary</a></li>
                             @endif

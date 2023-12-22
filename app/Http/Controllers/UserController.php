@@ -48,10 +48,32 @@ class UserController extends Controller
 
     public function delete(Request $request)
     {
+        $request->validate(['id' => 'required']);
+
         $user = User::findOrFail($request->input('id'));
         $user->delete();
 
         $message = "Moderator '" . $user->email . "' successfully deleted!";
+
+        return redirect()->back()->with('success', $message);
+    }
+
+    public function ban(Request $request)
+    {
+        $request->validate(
+            [
+                'id' => 'required',
+                'bannedTill' => 'nullable|date',
+            ]
+        );
+
+        $user = User::findOrFail($request->input('id'));
+        $user->bannedTill = $request->input('bannedTill');
+        $user->save();
+
+        $status = $user->bannedTill > now() ? ' banned till ' . $user->bannedTill : ' unbanned';
+
+        $message = 'Email ' . $user->email . $status . ' successfully.';
 
         return redirect()->back()->with('success', $message);
     }

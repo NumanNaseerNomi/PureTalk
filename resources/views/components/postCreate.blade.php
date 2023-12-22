@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-header">Create New Post</div>
     <div class="card-body">
-        <form method="POST" action="/post/create">
+        <form method="POST" action="{{ route('post.create') }}">
             @csrf
             <div class="form-floating mb-3">
                 <input class="form-control" type="text" name="title" id="title" required>

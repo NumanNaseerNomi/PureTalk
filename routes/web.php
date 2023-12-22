@@ -39,22 +39,25 @@ Route::middleware(['auth'])->group(
     function()
     {
         Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
-        Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+        Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
         Route::get('/users', [UserController::class, 'index'])->name('users');
+        Route::delete('/user', [UserController::class, 'delete'])->name('user.delete');
         Route::post('/user/approve', [UserController::class, 'approve'])->name('user.approve');
-        Route::post('/user/delete', [UserController::class, 'delete'])->name('user.delete');
+        Route::put('/user/ban', [UserController::class, 'ban'])->name('user.ban');
 
         Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
-        Route::post('/dictionary/create', [DictionaryController::class, 'create'])->name('dictionary.create');
-        Route::put('/dictionary/{id}/toggleBlock', [DictionaryController::class, 'toggleBlock'])->name('dictionary.toggleBlock');
-        Route::delete('/dictionary/{id}', [DictionaryController::class, 'delete'])->name('dictionary.delete');
+        Route::post('/dictionary', [DictionaryController::class, 'create'])->name('dictionary.create');
+        Route::put('/dictionary', [DictionaryController::class, 'update'])->name('dictionary.update');
+        Route::delete('/dictionary', [DictionaryController::class, 'delete'])->name('dictionary.delete');
+        Route::put('/dictionary/toggleBlock', [DictionaryController::class, 'toggleBlock'])->name('dictionary.toggleBlock');
 
-        Route::post('/post/create', [PostController::class, 'create'])->name('post.create');
-        Route::delete('/post/{id}', [PostController::class, 'delete'])->name('post.delete');
-        Route::post('/comment/create', [CommentController::class, 'create'])->name('comment.create');
+        Route::post('/post', [PostController::class, 'create'])->name('post.create');
+        Route::delete('/post', [PostController::class, 'delete'])->name('post.delete');
 
-        Route::post('/password/update', [AuthController::class, 'updatePassword'])->name('password.update');
+        Route::post('/comment', [CommentController::class, 'create'])->name('comment.create');
+
+        Route::put('/password', [AuthController::class, 'updatePassword'])->name('password.update');
         Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     }
 );

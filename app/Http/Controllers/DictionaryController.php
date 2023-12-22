@@ -28,9 +28,27 @@ class DictionaryController extends Controller
         return redirect()->back()->with('success', 'Word added successfully.');
     }
 
-    public function toggleBlock($id)
+    public function update(Request $request)
     {
-        $word = Dictionary::findOrFail($id);
+        $request->validate(
+            [
+                'id' => 'required',
+                'word' => 'required|unique:dictionary'
+            ]
+        );
+        
+        $item = Dictionary::findOrFail($request->input('id'));
+        $item->word = $request->input('word');
+        $item->save();
+        
+        return redirect()->back()->with('success', 'Word updated successfully.');
+    }
+
+    public function toggleBlock(Request $request)
+    {
+        $request->validate(['id' => 'required']);
+        
+        $word = Dictionary::findOrFail($request->input('id'));
         $word->isBlock = !$word->isBlock;
         $word->save();
 
@@ -39,10 +57,11 @@ class DictionaryController extends Controller
         return redirect()->back()->with('success', "Word $status successfully.");
     }
 
-    public function delete($id)
+    public function delete(Request $request)
     {
-        $word = Dictionary::findOrFail($id);
-        $word->delete();
+        $request->validate(['id' => 'required']);
+        
+        Dictionary::destroy($request->input('id'));
 
         return redirect()->back()->with('success', 'Word deleted successfully.');
     }
