@@ -32,6 +32,9 @@
                             <button type="submit" class="btn btn-outline-primary btn-sm">Delete</button>
                         </form>
                     @endif
+                    @if(Auth::user()->role == 'moderator' && request('tab') == 'active')
+                        <button type="button" class="btn btn-outline-primary btn-sm">Ban</button>
+                    @endif
                 </td>
             </tr>
         @endforeach
