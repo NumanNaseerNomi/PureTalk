@@ -55,7 +55,7 @@ Route::middleware(['auth'])->group(
         Route::delete('/post', [PostController::class, 'delete'])->name('post.delete');
         Route::post('/comment/create', [CommentController::class, 'create'])->name('comment.create');
 
-        Route::post('/password/update', [AuthController::class, 'updatePassword'])->name('password.update');
+        Route::put('/password', [AuthController::class, 'updatePassword'])->name('password.update');
         Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     }
 );
