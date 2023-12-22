@@ -35,4 +35,14 @@ class UserController extends Controller
         
         return view('users', compact('users'));
     }
+
+    public function approve(Request $request)
+    {
+        $user = User::findOrFail($request->input('id'));
+        $user->markEmailAsVerified();
+
+        $message = "Email '" . $user->email . "' successfully verified!";
+
+        return redirect()->back()->with('success', $message);
+    }
 }
