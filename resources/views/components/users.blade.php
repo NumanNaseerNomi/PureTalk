@@ -29,6 +29,7 @@
                     @if(Auth::user()->role == 'admin' && request('tab') == 'moderators')
                         <form method="POST" action="{{ route('user.delete', ['id' => $user->id]) }}">
                             @csrf
+                            @method('DELETE')
                             <button type="submit" class="btn btn-outline-primary btn-sm">Delete</button>
                         </form>
                     @endif
