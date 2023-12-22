@@ -25,10 +25,11 @@ class PostController extends Controller
         return redirect()->back()->with('success', 'Post created successfully.');
     }
 
-    public function delete($id)
+    public function delete(Request $request)
     {
-        $word = Post::findOrFail($id);
-        $word->delete();
+        $request->validate(['id' => 'required']);
+        
+        Post::destroy($request->input('id'));
 
         return redirect()->back()->with('success', 'Post deleted successfully.');
     }
