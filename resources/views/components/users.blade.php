@@ -45,7 +45,16 @@
                         </form>
                     @endif
                     @if(Auth::user()->role == 'moderator' && request('tab') == 'active')
-                        <button type="button" class="btn btn-outline-primary btn-sm">Ban</button>
+                        <button class="btn btn-outline-primary btn-sm collapse multi-collapse-ban-{{ $user->id }} show" type="button" id="banButton" data-bs-toggle="collapse" data-bs-target=".multi-collapse-ban-{{ $user->id }}" aria-expanded="false" aria-controls="banButton timeInput">Ban</button>
+                        <div class="collapse multi-collapse-ban-{{ $user->id }}" id="timeInput">
+                            <form class="input-group input-group-sm" method="POST" action="{{ route('user.ban', ['id' => $user->id]) }}">
+                                @csrf
+                                @method('PUT')
+                                <input type="datetime-local" class="form-control" value="{{ $user->bannedTill }}" name="bannedTill" aria-label="Select datetime" aria-describedby="button-addon1" required>
+                                <button class="btn btn-outline-secondary" type="submit" id="button-addon1">Ban</button>
+                                <button class="btn btn-outline-secondary" type="button" id="banButton" data-bs-toggle="collapse" data-bs-target=".multi-collapse-ban-{{ $user->id }}" aria-expanded="false" aria-controls="banButton timeInput">Cancel</button>
+                            </form>
+                        </div>
                     @endif
                 </td>
             </tr>
