@@ -10,6 +10,7 @@
             <a href="?tab=moderators" class="btn btn-outline-primary @if(request('tab') == 'moderators') active @endif">Moderators</a>
         @endif
     </div>
+    @if(Auth::user()->role == 'admin' && request('tab') == 'moderators')
     <div class="card text-center">
         <div class="card-header">Add Moderator</div>
         <div class="card-body">
@@ -48,5 +49,6 @@
             </form>
         </div>
     </div>
+    @endif
 </div>
 @include('layouts.footer')
