@@ -26,6 +26,10 @@ class UserController extends Controller
         {
             $query->whereNotNull('bannedTill')->where('bannedTill', '>', now());
         }
+        elseif($tab == 'moderators')
+        {
+            $query->where('role', 'moderator');
+        }
         
         $users = $query->get();
         
