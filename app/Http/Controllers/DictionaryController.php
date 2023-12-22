@@ -44,9 +44,11 @@ class DictionaryController extends Controller
         return redirect()->back()->with('success', 'Word updated successfully.');
     }
 
-    public function toggleBlock($id)
+    public function toggleBlock(Request $request)
     {
-        $word = Dictionary::findOrFail($id);
+        $request->validate(['id' => 'required']);
+        
+        $word = Dictionary::findOrFail($request->input('id'));
         $word->isBlock = !$word->isBlock;
         $word->save();
 
