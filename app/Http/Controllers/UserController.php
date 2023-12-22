@@ -48,6 +48,8 @@ class UserController extends Controller
 
     public function delete(Request $request)
     {
+        $request->validate(['id' => 'required']);
+
         $user = User::findOrFail($request->input('id'));
         $user->delete();
 
