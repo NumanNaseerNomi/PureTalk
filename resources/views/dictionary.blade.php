@@ -17,8 +17,8 @@
             <div class="col-md-3 mb-3">
                 <div class="card text-center">
                     <div class="card-body">
-                        <h5 class="collapse multi-collapse mb-3 show card-title" id="showWord">{{ $word->word }}</h5>
-                        <div class="collapse multi-collapse mb-3" id="editWord">
+                        <h5 class="collapse multi-collapse-{{ $word->id }} mb-3 show card-title" id="showWord">{{ $word->word }}</h5>
+                        <div class="collapse multi-collapse-{{ $word->id }} mb-3" id="editWord">
                             <form class="input-group input-group-sm" method="POST" action="{{ route('dictionary.update', ['id' => $word->id]) }}">
                                 @csrf
                                 @method('PUT')
@@ -32,7 +32,7 @@
                                 @method('PUT')
                                 <button type="submit" class="btn btn-outline-primary">{{ $word->isBlock ? 'Unblock' : 'Block' }}</button>
                             </form>
-                            <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="showWord editWord">Edit</button>
+                            <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-{{ $word->id }}" aria-expanded="false" aria-controls="showWord editWord">Edit</button>
                             <form method="POST" action="{{ route('dictionary.delete', ['id' => $word->id]) }}">
                                 @csrf
                                 @method('DELETE')
