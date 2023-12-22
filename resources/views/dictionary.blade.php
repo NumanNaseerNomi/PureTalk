@@ -5,7 +5,7 @@
     <div class="card text-center mb-3">
         <div class="card-header">Add Word</div>
         <div class="card-body">
-            <form class="input-group input-group-sm" method="POST" action="/dictionary/create">
+            <form class="input-group input-group-sm" method="POST" action="{{ route('dictionary.create') }}">
                 @csrf
                 <input type="text" class="form-control" name="word" aria-label="Add word" aria-describedby="button-addon1" required>
                 <button class="btn btn-outline-secondary" type="submit" id="button-addon1">Save</button>
