@@ -42,6 +42,7 @@ Route::middleware(['auth'])->group(
         Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
         Route::get('/users', [UserController::class, 'index'])->name('users');
+        Route::post('/user/approve', [UserController::class, 'approve'])->name('user.approve');
 
         Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
         Route::post('/dictionary/create', [DictionaryController::class, 'create'])->name('dictionary.create');
