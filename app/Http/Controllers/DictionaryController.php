@@ -57,10 +57,11 @@ class DictionaryController extends Controller
         return redirect()->back()->with('success', "Word $status successfully.");
     }
 
-    public function delete($id)
+    public function delete(Request $request)
     {
-        $word = Dictionary::findOrFail($id);
-        $word->delete();
+        $request->validate(['id' => 'required']);
+        
+        Dictionary::destroy($request->input('id'));
 
         return redirect()->back()->with('success', 'Word deleted successfully.');
     }
