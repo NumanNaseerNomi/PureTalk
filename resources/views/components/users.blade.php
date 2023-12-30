@@ -44,7 +44,7 @@
                             <button type="submit" class="btn btn-outline-primary btn-sm">Delete</button>
                         </form>
                     @endif
-                    @if(Auth::user()->role == 'moderator' && request('tab') == 'active')
+                    @if(Auth::user()->role == 'moderator' && request('tab', 'active') == 'active')
                         <button class="btn btn-outline-primary btn-sm collapse multi-collapse-ban-{{ $user->id }} show" type="button" id="banButton" data-bs-toggle="collapse" data-bs-target=".multi-collapse-ban-{{ $user->id }}" aria-expanded="false" aria-controls="banButton timeInput">Ban</button>
                         <div class="collapse multi-collapse-ban-{{ $user->id }}" id="timeInput">
                             <form class="input-group input-group-sm" method="POST" action="{{ route('user.ban', ['id' => $user->id]) }}">
